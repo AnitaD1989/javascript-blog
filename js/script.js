@@ -1,4 +1,4 @@
-{
+
     'use strict';
 
     const titleClickHandler = function(event){  
@@ -24,46 +24,83 @@
         articleRelatedToLink.classList.add('active');    
     }
 
-    const links = document.querySelectorAll('.titles a');
+    /*const links = document.querySelectorAll('.titles a');
     for(let link of links) {
         link.addEventListener('click', titleClickHandler);
-    }
-}
+    }*/
 
 
-
-    
-    
-    
-   /* const optArticleSelector = '.post',
+    /*Generownaie listy tytulow*/
+{
+    const optArticleSelector = '.post',
         optTitleSelector = '.post-title',
         optTitleListSelector = '.titles';
 
     function generateTitleLinks(){
+    
+     /*szukam elemenetu do usuniecia */
+        const titleList = document.querySelector(optTitleListSelector);
+    
+     /* remove contents of titleList */
+        titleList.innerHTML='';
 
-    /* remove contents of titleList */
+     /*Petla dla wszystkich artykulow*/
+        var articles = document.querySelectorAll(optArticleSelector);
+         
 
-    /* for each article */
+    /*stworzenie zmiennej html i petli */
+        let html ='';
+        for (let article of articles) {
 
     /* get the article id */
-
+            const articleId = clickedElemenet.getAttribute('id'); 
+        } 
+    
     /* find the title element */
-
     /* get the title from the title element */
+        const articleTitle = article.querySelector(optTitleSelector).innerHTML;
 
     /* create HTML of the link */
+        const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+        console.log ('HTML created!');
 
-    /* insert link into titleList */
+     /* insert link into titleList */
+        html = html + linkHTML;
+    }
+
+    titleList.innerHTML = html;
+
+    /*przeniesienie stalej i petli na koniec*/
+    const links = document.querySelectorAll('.titles a');
+    for(let link of links) {
+        link.addEventListener('click', titleClickHandler);
+    }
+
+
+     generateTitleLinks();
+
+    }
+
+
+    
+    
+    
+
 
     
 
-    /*function generateTitleLinks(){
     
-    const titleList = document.querySelector(optArticleSelector);
+
+   
+
+
+
+
     
-    clearMessages()
 
-        document.getElementById('messages').innerHTML = (optArticleSelector);
-    }*/
+    
 
+
+
+    
 
