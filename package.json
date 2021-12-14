@@ -9,6 +9,8 @@
     "init:files": "touch README.md index.html sass/style.scss js/script.js",
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
     "test:html": "html-validate && npm-run-all test:*",
+    "test:js": "eslint js/",
+    "test": "npm-run-all test:*",
     "build:sass": "node-sass --output-style compact -o css sass",
     "build": "npm-run-all build:* test",
     "build-dev": "npm-run-all build-dev-sass",
