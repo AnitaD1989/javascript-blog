@@ -43,7 +43,7 @@
         for (let article of articles) {
 
     /* get the article id */
-            const articleId = clickedElement.getAttribute('id'); 
+            const articleId = article.getAttribute('id'); 
         
     /* find the title element */
     /* get the title from the title element */
