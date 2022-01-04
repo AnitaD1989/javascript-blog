@@ -27,10 +27,6 @@ const titleClickHandler = function(event){
     optTitleSelector = '.post-title',
     optTitleListSelector = '.titles';
 
-  const optArticleTagsSelector = '.post-tags .lists';
-
-
-  // eslint-disable-next-line no-inner-declarations
   function generateTitleLinks(){
 
     /*szukam elemenetu do usuniecia */
@@ -73,53 +69,52 @@ const titleClickHandler = function(event){
 }
 
 function generateTags(){
+
+  const optArticleTagsSelector = '.post-tags .lists';
+
   /* find all articles */
+  const articles = document.querySelectorAll(optArticleTagsSelector);
 
   /* START LOOP: for every article: */
-
   /* find tags wrapper */
+  var article = articles.querySelectorAll(optArticleTagsSelector);
 
   /* make html variable with empty string */
+  var html = '';
 
   /* get tags from data-tags attribute */
+  const articleTags = function() {
+    console.log('link was clicked!');
+    const article = this;
+  }
+
 
   /* split tags into array */
+  const articleTagsArray = articleTags.split(' ');
 
   /* START LOOP: for each tag */
+  for(let tag of articleTagsArray){
+    var tags = tag.querySelectorAll('data-tags');
+    console.log();
 
-  /* generate HTML of the link */
 
-  /* add generated code to html variable */
+    /* generate HTML of the link */
+    const linkHTML = '<li><a href="#tag' + data-tags>'</a></li>';
+    console.log ('HTML created!');
+
+    /* add generated code to html variable */
+    var html = html + linkHTML;
+
+
 
   /* END LOOP: for each tag */
 
   /* insert HTML of all the links into the tags wrapper */
 
   /* END LOOP: for every article: */
-}
+
+  }
+
+
 
 generateTags();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
