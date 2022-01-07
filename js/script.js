@@ -68,6 +68,9 @@ const titleClickHandler = function(event){
 
 function generateTags() {
 
+  /* [NEW] create a new variable allTags with an empty array */
+  let allTags = [];
+
   const optArticleTagsSelector = '.post-tags .lists';
 
   /* find all articles */
