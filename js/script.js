@@ -68,8 +68,8 @@ const titleClickHandler = function(event){
 
 function generateTags() {
 
-  /* [NEW] create a new variable allTags with an empty array */
-  let allTags = [];
+  /* [NEW] create a new variable allTags with an empty object */
+  let allTags = {};
 
   const optArticleTagsSelector = '.post-tags .lists';
 
@@ -103,9 +103,11 @@ function generateTags() {
     html += linkHTML;
 
     /* [NEW] check if this link is NOT already in allTags */
-    if(allTags.indexOf(linkHTML) == -1){
-      /* [NEW] add generated code to allTags array */
-      allTags.push(linkHTML);
+    if(!allTags[tag]){
+      /* [NEW] add tag to allTags object */
+      allTags[tag] = 1;
+    } else {
+     allTags[tag]++;
     }
 
     /* END LOOP for each tag */
@@ -120,7 +122,8 @@ function generateTags() {
   const tagList = document.querySelector(optTagsListSelector);
 
   /* [NEW] add html from allTags to tagList */
-  tagList.innerHTML = allTags.join(' ');
+  //tagList.innerHTML = allTags.join(' ');
+  console.log('allTags');
 
 }
 
