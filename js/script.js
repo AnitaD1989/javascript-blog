@@ -64,7 +64,7 @@ const titleClickHandler = function(event){
     }
   }
   generateTitleLinks();
-}
+
 
 function calculateTagsParams(tags){
   const params = { max : 0, min : 999999 };
@@ -106,7 +106,7 @@ function generateTags() {
   for (let article of articles) {
 
   /* find tags wrapper */
-  const tagsWrapper = article.querySelector(opt.optArticleTagsSelector);
+  const tagsWrapper = article.querySelector(optArticleTagsSelector);
 
   /* make html variable with empty string */
   let html = '';
@@ -166,6 +166,7 @@ function generateTags() {
   /*[NEW] add HTML from allTagsHTML to tagList */
   tagList.innerHTML = allTagsHTML;
 
+  }
 }
 
 generateTags();
@@ -317,6 +318,6 @@ function addClickListenersToAuthors(){
 
   /* END LOOP: for each link */
   }
-}
 
 addClickListenersToAuthors();
+
