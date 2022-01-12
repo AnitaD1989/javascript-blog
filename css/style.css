@@ -110,4 +110,14 @@ body {
   font-size: 15px;
 }
 
+.post-tags .tag-size-2 {
+  color: purple;
+  font-size: 15px;
+}
+
+.post-tags .tag-size-3 {
+  color: red;
+  font-size: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */
