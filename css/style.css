@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: url("https://images.pexels.com/photos/890507/pexels-photo-890507.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-image: url("https://images.pexels.com/photos/5474031/pexels-photo-5474031.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background: #fff;
   font-family: "Source Sans Pro", sans-serif;
   color: #444;
@@ -97,27 +97,45 @@ body {
   font-style: italic;
 }
 
-.post-tags {
+.sidebar .tags {
   display: flex;
+  flex-wrap: wrap;
 }
 
-.post-tags p {
+li {
+  margin: 10px;
+}
+
+p {
   margin: 0 10px 0 0;
 }
 
-.post-tags .tag-size-1 {
+.tag-size-1 {
   color: #103750;
   font-size: 15px;
 }
 
-.post-tags .tag-size-2 {
+.tag-size-2 {
   color: purple;
   font-size: 15px;
 }
 
-.post-tags .tag-size-3 {
+.tag-size-3 {
   color: red;
   font-size: 20px;
+}
+
+.tag-size-4 {
+  color: green;
+  font-size: 25px;
+}
+
+.tag-size-5 {
+  font-size: 30px;
+}
+
+.tags .list li {
+  display: inline-block;
 }
 
 /*# sourceMappingURL=style.css.map */

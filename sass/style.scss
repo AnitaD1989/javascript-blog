@@ -16,7 +16,6 @@ $font-text: 'Source Sans Pro', sans-serif;
 }
 
 body {
-  background-image: url("https://images.pexels.com/photos/890507/pexels-photo-890507.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
   background: $color-light;
   font-family: $font-text;
   color: $color-dark;
@@ -116,12 +115,18 @@ body {
   font-style: italic;
 }
 
-.post-tags {
+.sidebar .tags {
   display: flex;
+  flex-wrap: wrap;
+}
 
+li {
+  margin: 10px;
+}
   p {
     margin: 0 10px 0 0;
   }
+
 .tag-size-1 {
   color: rgb(16, 55, 80);
   font-size: 15px;
@@ -137,8 +142,17 @@ body {
   font-size: 20px;
 }
 
+.tag-size-4 {
+  color: green;
+  font-size: 25px;
+}
+
+.tag-size-5 {
+  font-size: 30px;
+}
+
 
 .tags .list li {
   display: inline-block;
 }
-}
+
