@@ -272,6 +272,9 @@ function generateAuthors() {
     /* find author wrapper */
     const authorWrapper = article.querySelector(opts.authorWrapperSelector);
 
+    /* make html variable with empty string */
+    let html = ' ';
+
     /* get authors from data-author attribute */
     const articleAuthor = article.getAttribute('data-authors');
 
@@ -280,6 +283,7 @@ function generateAuthors() {
     const linkHTMLData = {id: articleAuthor, title: articleAuthor};
     const linkHTML = templates.authorLink(linkHTMLData);
     console.log(linkHTMLData);
+
 
     /* [NEW] check if this link is NOT already in allAuthors */
     if (!allAuthors[articleAuthor]) {
@@ -290,7 +294,7 @@ function generateAuthors() {
     }
 
     /* insert HTML of all the links into the authors wrapper */
-
+    authorWrapper.innerHTML = html;
   }
 
   /* [NEW] find list of authors in right column */
@@ -313,7 +317,7 @@ function generateAuthors() {
       count: allAuthors[author],
     });
   }
-  /* [NEW] END LOOP: for each tag in allTags: */
+
 
   /*[NEW] add HTML from allAuthorsHTML to AuthorsList */
   //authorList.innerHTML = allAuthorsHTML;
@@ -378,6 +382,8 @@ function addClickListenersToAuthors() {
 }
 
 addClickListenersToAuthors();
+
+
 
 
 
